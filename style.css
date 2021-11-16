@@ -1,0 +1,129 @@
+/* GLOBALS */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+/* GLOBALS */
+.project{
+    width: 1440px;
+    height: 100vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--Dark-cyan);
+    overflow: hidden;
+}
+@media(max-width:767px){
+    .project{
+        width: 100%;
+    }
+}
+.project::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-image: url(/images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+.project::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    background-image: url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+}
+main{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    background-color: hsl(0, 0%, 95%);
+    text-align: center;
+    width: fit-content;
+    border-radius: 10px;
+}
+main .background img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main .info{
+    padding: 20px;
+    padding-top:80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--Dark-gray) ;
+}
+main .info .image{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+main .info .image img{
+    border-radius: 50%;
+    border: hsl(0, 0%, 95%) 5px solid ;
+}
+main .info h1{
+    font-size: 18px;
+    color: var(--Very-dark-desaturated-blue);
+}
+main .info p{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+main .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+main .country{
+
+}
+main .stats{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+main .stats h2 {
+    font-size: 18px;
+    color: var(--Very-dark-desaturated-blue);
+}
+main .stats  p{
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 1px;
+}
+main .followers{
+
+}
+main .likes{
+
+}
+main .media{
+
+}
